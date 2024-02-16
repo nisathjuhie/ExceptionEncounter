@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Table</title>
+</head>
+<body>
+    <h1>Exception Data Table</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Spring App Name</th>
+                <th>Log Message</th>
+                <th>Stack Trace</th>
+                <th>Spring Active Profile</th>
+                <th>Exception Name</th>
+                </tr>
+        </thead>
+        <tbody id="exceptionTableBody">
+        <tr th:each="exception : ${exceptions}"></td>
+            <td th:text="${exception.springAppName}"></td>
+            <td th:text="${exception.logMessage}"></td>
+            <td th:text="${exception.stackTrace}"></td>
+            <td th:text="${exception.springActiveProfile}"></td>
+           <td th:text="${exception.exceptionName}"></td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
