@@ -53,7 +53,7 @@ public class EmailService {
         helper.setText(body);
 
         updateExceptionTable();
-        FileSystemResource file = new FileSystemResource(new File("C:/Users/2144296/Downloads/EODexceptions/EODexceptions/src/main/resources/templates/exceptionTable.html"));
+        FileSystemResource file = new FileSystemResource(new File("C:/Users/Downloads/EODexceptions/EODexceptions/src/main/resources/templates/exceptionTable.html"));
         helper.addAttachment("exceptionTable.html", file);
 
         mailSender.send(message);
@@ -73,7 +73,7 @@ public class EmailService {
 
     private void writeHtmlToFile(String htmlContent) {
         // Set the path where you want to store the HTML file
-        Path filePath = Paths.get("C:/Users/2144296/Downloads/EODexceptions/EODexceptions/src/main/resources/templates/exceptionTable.html");
+        Path filePath = Paths.get("C:/Users/Downloads/EODexceptions/EODexceptions/src/main/resources/templates/exceptionTable.html");
 
         try (FileWriter writer = new FileWriter(filePath.toFile())) {
             // Write the HTML content to the file
