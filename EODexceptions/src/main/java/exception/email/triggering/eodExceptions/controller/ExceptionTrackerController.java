@@ -45,7 +45,7 @@ public class ExceptionTrackerController {
 
         try {
             ObjectMapper objectMapper = new ObjectMapper();
-            File jsonFile = new File("C:\\Users\\2144296\\Downloads\\new 4.json");
+            File jsonFile = new File("filename");
             Response root = objectMapper.readValue(jsonFile, Response.class);
 
            List<ExceptionsEncountered> exceptionsEncountereds = dataConverterService.convertData(root);
